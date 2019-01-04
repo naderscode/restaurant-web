@@ -41,3 +41,7 @@ body {
 .fa, fa-lg {
   margin-right: 3px;
 }
+
+.card {
+  margin-bottom:20px;
+}
