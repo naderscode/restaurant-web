@@ -44,7 +44,9 @@
                       <img src="img/logo.png" class="img-fluid">
                   </div>
                   <div class="col-12 col-sm-3 col md-3 align-self-center">
-                      <a class="btn btn-warning btn-sm btn-block reserve-btn" href="#reserve-table" role="button">Reserve Table</a>
+                      <a role="button" class="btn btn-block nav-link btn-warning btn-sm btn-block reserve-btn"
+                        data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+888-1234-5678</strong>"
+                        data-placement="bottom" href="#reserve-table">Reserve Table</a>
                   </div>
               </div>
           </div>
@@ -210,6 +212,11 @@
           <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
           <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
           <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+          <script>
+            $(document).ready(function(){
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+         </script>
   </body>
 
 </html>
