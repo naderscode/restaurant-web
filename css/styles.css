@@ -72,3 +72,9 @@ white-space:normal !important;
     left: 0;
     min-height: 300px;
 }
+
+#carouselButton {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
