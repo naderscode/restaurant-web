@@ -58,3 +58,6 @@ body {
 
 .modal-body {
   background-color: #D1C4E9; }
+
+.form-row-date, .form-row-section {
+  margin-bottom: 20px; }
