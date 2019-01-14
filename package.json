@@ -14,15 +14,18 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "clean": "rimraf dist",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "cssmin": "^0.4.3",
+    "htmlmin": "0.0.7",
+    "imagemin": "imagemin img/* -o dist/img",
     "lite-server": "^2.3.0",
     "node-sass": "^4.7.2",
     "onchange": "^3.3.0",
     "parallelshell": "^3.0.2",
     "rimraf": "^2.6.2",
-    "clean": "rimraf dist",
-    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
-    "imagemin": "imagemin img/* -o dist/img"
-
+    "uglifyjs": "^2.4.11",
+    "usemin-cli": "^0.5.1"
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
