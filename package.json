@@ -19,7 +19,8 @@
     "onchange": "^3.3.0",
     "parallelshell": "^3.0.2",
     "rimraf": "^2.6.2",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts"
 
   },
   "dependencies": {
