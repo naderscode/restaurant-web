@@ -63,3 +63,6 @@ body {
 
 .form-row-date, .form-row-section {
   margin-bottom: 20px; }
+
+.navbar-text {
+  cursor: pointer; }
