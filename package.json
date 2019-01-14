@@ -17,7 +17,10 @@
     "lite-server": "^2.3.0",
     "node-sass": "^4.7.2",
     "onchange": "^3.3.0",
-    "parallelshell": "^3.0.2"
+    "parallelshell": "^3.0.2",
+    "rimraf": "^2.6.2",
+    "clean": "rimraf dist"
+
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
