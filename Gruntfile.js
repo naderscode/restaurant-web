@@ -67,6 +67,16 @@ module.exports = function (grunt) {
             build: {
                 src: [ 'dist/']
             }
+        },
+        imagemin: {
+            dynamic: {
+                files: [{
+                    expand: true,                  // Enable dynamic expansion
+                    cwd: './',                   // Src matches are relative to this path
+                    src: ['img/*.{png,jpg,gif}'],   // Actual patterns to match
+                    dest: 'dist/'                  // Destination path prefix
+                }]
+            }
         }
   });
   grunt.registerTask('css', ['sass']);
