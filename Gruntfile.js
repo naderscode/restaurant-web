@@ -37,6 +37,36 @@ module.exports = function (grunt) {
                     }
                 }
             }
+        },
+        copy: {
+            html: {
+                files: [
+                {
+                    //for html
+                    expand: true,
+                    dot: true,
+                    cwd: './',
+                    src: ['*.html'],
+                    dest: 'dist'
+                }]
+            },
+            fonts: {
+                files: [
+                {
+                    //for font-awesome
+                    expand: true,
+                    dot: true,
+                    cwd: 'node_modules/font-awesome',
+                    src: ['fonts/*.*'],
+                    dest: 'dist'
+                }]
+            }
+        },
+
+        clean: {
+            build: {
+                src: [ 'dist/']
+            }
         }
   });
   grunt.registerTask('css', ['sass']);
