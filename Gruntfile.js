@@ -7,7 +7,9 @@ module.exports = function (grunt) {
    require('time-grunt')(grunt);
 
    // Automatically load required Grunt tasks
-   require('jit-grunt')(grunt);
+   require('jit-grunt')(grunt, {
+      useminPrepare: 'grunt-usemin'
+   });
 
   grunt.initConfig({
     sass: {
