@@ -59,3 +59,22 @@ gulp.task('copyfonts', function() {
        .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
        .pipe(gulp.dest('dist/img'));
    });
+
+   gulp.task('usemin', function() {
+  return gulp.src('./*.html')
+  .pipe(flatmap(function(stream, file){
+      return stream
+        .pipe(usemin({
+            css: [ rev() ],
+            html: [ function() { return htmlmin({ collapseWhitespace: true })} ],
+            js: [ uglify(), rev() ],
+            inlinejs: [ uglify() ],
+            inlinecss: [ cleanCss(), 'concat' ]
+        }))
+    }))
+    .pipe(gulp.dest('dist/'));
+});
+
+gulp.task('build',['clean'], function() {
+    gulp.start('copyfonts','imagemin','usemin');
+});
