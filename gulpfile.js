@@ -4,7 +4,13 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync'),
     del = require('del'),
-    imagemin = require('gulp-imagemin');
+    imagemin = require('gulp-imagemin'),
+    uglify = require('gulp-uglify'),
+    usemin = require('gulp-usemin'),
+    rev = require('gulp-rev'),
+    cleanCss = require('gulp-clean-css'),
+    flatmap = require('gulp-flatmap'),
+    htmlmin = require('gulp-htmlmin');
 
 gulp.task('sass', function () {
   return gulp.src('./css/*.scss')
@@ -53,4 +59,3 @@ gulp.task('copyfonts', function() {
        .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
        .pipe(gulp.dest('dist/img'));
    });
-   
