@@ -35,3 +35,13 @@ gulp.task('browser-sync', function () {
 gulp.task('default', ['browser-sync'], function() {
     gulp.start('sass:watch');
 });
+
+// Clean
+gulp.task('clean', function() {
+    return del(['dist']);
+});
+
+gulp.task('copyfonts', function() {
+   gulp.src('./node_modules/font-awesome/fonts/**/*.{ttf,woff,eof,svg}*')
+   .pipe(gulp.dest('./dist/fonts'));
+});
